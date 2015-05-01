@@ -4,9 +4,9 @@ This tool provides a microbenchmarking suit to undestand the design of CUDA-capa
 
 steps to run the benchmarks:
 
-1) Modify the Makefile and set CUDAHOME to the CUDA root. (notice: $CUDAHOME/bin/nvcc should be valid)
+1. Modify the Makefile and set CUDAHOME to the CUDA root. (notice: $CUDAHOME/bin/nvcc should be valid)
 
-2) Compile OpenACC library (This library is outsourced from IPMACC project):
+2. Compile OpenACC library (This library is outsourced from IPMACC project):
 
    `$ make openacc`
 
