@@ -1,6 +1,5 @@
 This tool provides a microbenchmarking suit to undestand the design of CUDA-capable GPGPUs in handling outstanding memory requests. Read [1] to read the methodology.
 
-==============
 # INSTALLING 
 
 steps to run the benchmarks:
@@ -27,12 +26,10 @@ steps to run the benchmarks:
 
 8) processed output will be stored at the same location with the suffix of .csv. Plot the data with your favorite visualizing tool, e.g. gnuplot.
 
-==========
 # NOTICE 
 
 since run_single_config.sh appends the output to the file, it is recommended to clear the last run log before every run (using `make clean` command)
 
-=========
 # ABOUT 
 
 Author: Ahmad Lashgar
@@ -41,7 +38,6 @@ Affiliation: University of Victoria
 
 Contact: lashgar@uvic.ca
 
-==============
 # References 
 
 [1] Ahmad Lashgar, Ebad Salehi, and Amirali Baniasadi. **Understanding Outstanding Memory Request Handling Resources in GPGPUs**. To be appeared in The Sixth International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies (HEART). Boston MA, USA, June 1-2, 2015.
