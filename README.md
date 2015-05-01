@@ -10,21 +10,21 @@ steps to run the benchmarks:
 
    `$ make openacc`
 
-3) Modify run_single_config.sh file and set destination CUDA GPU: `GPUARCH=-arch=sm_20`
+3. Modify run_single_config.sh file and set destination CUDA GPU: `GPUARCH=-arch=sm_20`
 
-4) optional: modify the run_all_config.sh file and specify the range of threads, loads per threads, and memory patterns.
+4. optional: modify the run_all_config.sh file and specify the range of threads, loads per threads, and memory patterns.
 
-5) Run run_all_config.sh
+5. Run run_all_config.sh
 
     `$ bash ./run_all_config.sh`
 
    raw results will be stored in the log/data*.spc. In each file, each row reports the times measured for certains number of threads. There three independent runs are reported. Eeach run reports the numbers measured by up to 16 concurrent warps.
 
-7) post-process the data and retrieve latency/variance correponding to each thread by running auxil/calcvar.py:
+6. post-process the data and retrieve latency/variance correponding to each thread by running auxil/calcvar.py:
 
     `$ python calcvar.py -f log/data_2merged_2loads.spc`
 
-8) processed output will be stored at the same location with the suffix of .csv. Plot the data with your favorite visualizing tool, e.g. gnuplot.
+7. processed output will be stored at the same location with the suffix of .csv. Plot the data with your favorite visualizing tool, e.g. gnuplot.
 
 # NOTICE 
 
