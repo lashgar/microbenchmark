@@ -2,7 +2,7 @@ This tool provides a microbenchmarking suit to measure the capability of CUDA GP
 outstanding memory requests. Read [1] to understand the methodology.
 
 ==============
-= INSTALLING =
+# INSTALLING 
 ==============
 steps to run the benchmarks:
 1) Modify the Makefile and set CUDAHOME to the CUDA root. (notice: $CUDAHOME/bin/nvcc should be valid)
@@ -23,19 +23,19 @@ steps to run the benchmarks:
    your favorite visualizing tool, e.g. gnuplot.
 
 ==========
-= NOTICE =
+# NOTICE 
 ==========
 since run_single_config.sh appends the output to the file, it is recommended to clear the last
 run log before every run (using `make clean' command)
 
 =========
-= ABOUT =
+# ABOUT 
 =========
 Author: Ahmad Lashgar
 Affiliation: University of Victoria
 Contact: lashgar@uvic.ca
 
 ==============
-= References =
+# References 
 ==============
 [1] Ahmad Lashgar, Ebad Salehi, and Amirali Baniasadi. Understanding Outstanding Memory Request Handling Resources in GPGPUs. To be appeared in The Sixth International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies (HEART). Boston MA, USA, June 1-2, 2015.
