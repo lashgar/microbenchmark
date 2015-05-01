@@ -1,9 +1,8 @@
-This tool provides a microbenchmarking suit to measure the capability of CUDA GPU in handling
-outstanding memory requests. Read [1] to understand the methodology.
+This tool provides a microbenchmarking suit to undestand the design of CUDA-capable GPGPUs in handling outstanding memory requests. Read [1] to read the methodology.
 
 ==============
 # INSTALLING 
-==============
+
 steps to run the benchmarks:
 
 1) Modify the Makefile and set CUDAHOME to the CUDA root. (notice: $CUDAHOME/bin/nvcc should be valid)
@@ -20,36 +19,29 @@ steps to run the benchmarks:
 
     `$ bash ./run_all_config.sh`
 
-   raw results will be stored in the log/data*.spc. In each file, each row reports the times measured
+   raw results will be stored in the log/data*.spc. In each file, each row reports the times measured for certains number of threads. There three independent runs are reported. Eeach run reports the numbers measured by up to 16 concurrent warps.
 
-   for certains number of threads. There three independent runs are reported. Eeach run reports the
-
-   numbers measured by up to 16 concurrent warps.
-
-7) post-process the data and retrieve latency/variance correponding to each thread by running
-
-   auxil/calcvar.py:
+7) post-process the data and retrieve latency/variance correponding to each thread by running auxil/calcvar.py:
 
     `$ python calcvar.py -f log/data_2merged_2loads.spc`
 
-8) processed output will be stored at the same location with the suffix of .csv. Plot the data with
-
-   your favorite visualizing tool, e.g. gnuplot.
+8) processed output will be stored at the same location with the suffix of .csv. Plot the data with your favorite visualizing tool, e.g. gnuplot.
 
 ==========
 # NOTICE 
-==========
-since run_single_config.sh appends the output to the file, it is recommended to clear the last
-run log before every run (using `make clean` command)
+
+since run_single_config.sh appends the output to the file, it is recommended to clear the last run log before every run (using `make clean` command)
 
 =========
 # ABOUT 
-=========
+
 Author: Ahmad Lashgar
+
 Affiliation: University of Victoria
+
 Contact: lashgar@uvic.ca
 
 ==============
 # References 
-==============
-[1] Ahmad Lashgar, Ebad Salehi, and Amirali Baniasadi. Understanding Outstanding Memory Request Handling Resources in GPGPUs. To be appeared in The Sixth International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies (HEART). Boston MA, USA, June 1-2, 2015.
+
+[1] Ahmad Lashgar, Ebad Salehi, and Amirali Baniasadi. **Understanding Outstanding Memory Request Handling Resources in GPGPUs**. To be appeared in The Sixth International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies (HEART). Boston MA, USA, June 1-2, 2015.
