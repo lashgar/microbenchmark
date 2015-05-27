@@ -32,11 +32,11 @@ since run_single_config.sh appends the output to the file, it is recommended to 
 
 # ABOUT 
 
-Author: Ahmad Lashgar
+**Author:** Ahmad Lashgar
 
-Affiliation: University of Victoria
+**Affiliation:** University of Victoria
 
-Contact: lashgar@uvic.ca
+**Contact:** lashgar@uvic.ca
 
 # References 
 
