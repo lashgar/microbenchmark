@@ -1,4 +1,4 @@
-This tool provides a microbenchmarking suit to undestand the design of CUDA-capable GPGPUs in handling outstanding memory requests. Read [1] to read the methodology.
+This tool provides a microbenchmarking suit to undestand the design of CUDA-capable GPGPUs in handling outstanding memory requests. Refer to [1] to read the methodology.
 
 # INSTALLING 
 
