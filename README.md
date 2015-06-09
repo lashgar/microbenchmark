@@ -38,6 +38,11 @@ since run_single_config.sh appends the output to the file, it is recommended to 
 
 **Contact:** lashgar@uvic.ca
 
+# Micro-benchmarking assumptions
+
+1. We assume the cache hierarchy is not blocking.
+2. For GPUs with L2 cache (Fermi and above), all memory requests are served from L2, if the size of data on the GPU DRAM is lower than the cache size. In this case, to conclude the saturation of outstanding memory handling resources, the size of L2 cache must be consider, since some variations in the delay may correspond to L2 cache misses. In our evaluations in [1], we kept the data size always below 560K.
+
 # References 
 
 [1] Ahmad Lashgar, Ebad Salehi, and Amirali Baniasadi. **Understanding Outstanding Memory Request Handling Resources in GPGPUs**. To be appeared in The Sixth International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies (HEART). Boston MA, USA, June 1-2, 2015.
